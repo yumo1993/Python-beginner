@@ -1,3 +1,7 @@
+####super()先执行父类的__int__，再执行自己的__init__,再执行自己的function
+
+
+
 class A():
     def __init__(self):
         print('enter A')
