@@ -1,4 +1,5 @@
 # conding=utf-8
+#####   https://zhuanlan.zhihu.com/p/29795495
 
 from PySide2.QtWidgets import QWidget, QApplication, QPushButton, QMessageBox, QLabel, QCheckBox
 from PySide2.QtGui import QPixmap
@@ -81,6 +82,23 @@ class Example(QWidget):
 
     def critical(self):
         # reply = QMessageBox.critical(self,'错误','这是一个错误消息对话框', QMessageBox.Retry | QMessageBox.Abort | QMessageBox.Ignore , QMessageBox.Retry)
+        #box = QtGui.QMessageBox()
+        #box.setIcon(QtGui.QMessageBox.Question)
+        #box.setWindowTitle('Kaydet!')
+        #box.setText('Kaydetmek İstediğinize Emin Misiniz?')
+        #box.setStandardButtons(QtGui.QMessageBox.Yes|QtGui.QMessageBox.No)
+        #buttonY = box.button(QtGui.QMessageBox.Yes) ## 改变standardbutton 的名字
+        #buttonY.setText('Evet')
+        #buttonN = box.button(QtGui.QMessageBox.No)
+        #buttonN.setText('Iptal')
+        #box.exec_()
+
+       # if box.clickedButton() == buttonY:
+            # YES pressed
+        #elif box.clickedButton() == buttonN:
+            # NO pressed
+
+        
         msgBox = QMessageBox()
         msgBox.setWindowTitle('错误')
         msgBox.setIcon(QMessageBox.Critical)
