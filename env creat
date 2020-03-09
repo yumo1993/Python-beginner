@@ -1,0 +1,5 @@
+	• conda creat -n name python=3.7
+	• activate name
+	
+	• pip install PySide==1.0.2qt472
+pyinstaller
