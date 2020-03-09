@@ -1,0 +1,10 @@
+not good camptibale with python 3.6
+python36.dll not found
+pyinstaller --onefile test.py --clean
+pyinstaller test.spec
+当前运行目录。exe 还是 script
+    if getattr(sys, 'frozen', False):
+        bundle_dir = sys._MEIPASS
+    else:
+        bundle_dir = path.dirname(path.abspath(__file__))
+    path.join(bundle_dir, "DATA", "tlk_cardlogo.png"   '''合并目录下的绑定的文件'''
