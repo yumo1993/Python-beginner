@@ -1,0 +1,28 @@
+1、将替换后的内容保存到新文件中
+
+    import sys
+    import re
+     
+    f1 = open('/home/wuzz/11.txt','r+')
+    f2 = open('/home/wuzz/12.txt','w+')
+    str1=r'hello'
+    str2=r'hi'
+    for ss in f1.readlines():
+        tt=re.sub(str1,str2,ss)
+        f2.write(tt)
+    f1.close()
+    f2.close()
+
+2、直接替换当前文件中的字符
+
+分析：先以只读模式打开后，对文件每一行进行readlines()操作，并保存到新的列表中。然后随之关闭。 再以'w+'方式进行读写打开，对已经保存的列表用re.sub()进行替换操作，并用f.writelines()函数写入。
+
+    import re
+    f=open('/home/wuzz/11.txt','r')
+    alllines=f.readlines()
+    f.close()
+    f=open('/home/wuzz/11.txt','w+')
+    for eachline in alllines:
+        a=re.sub('hello','hi',eachline)
+        f.writelines(a)
+    f.close()
